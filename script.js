@@ -1,4 +1,3 @@
-
 var currentMonth = dayjs().month();
 var currentYear = dayjs().year();
 console.log(currentMonth);
@@ -34,3 +33,4 @@ workingDaysEl =document.getElementById("working-days");
 console.log (workingDaysEl)
 
 workingDaysEl.textContent = numberOfWeekdays;
+
