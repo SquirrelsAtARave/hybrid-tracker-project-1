@@ -1,6 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <title>31-Day Calendar</title>
+  <style>
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      margin: 20px;
+    }
+
+    .day {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    .header {
+      font-weight: bold;
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <div class="calendar">
+    <div class="header">Sun</div>
+    <div class="header">Mon</div>
+    <div class="header">Tue</div>
+    <div class="header">Wed</div>
+    <div class="header">Thu</div>
+    <div class="header">Fri</div>
+    <div class="header">Sat</div>
+
+    <div class="day"></div>
+    <div class="day"></div>
+    <div class="day"></div>
+    <div class="day"></div>
+    
+    <div class="day">1</div>
+
+    <div class="day">2</div>
+    <div class="day">3</div>
+    <div class="day">4</div>
+    <div class="day">5</div>
+    <div class="day">6</div>
+    <div class="day">7</div>
+    <div class="day">8</div>
+    <div class="day">9</div>
+    <div class="day">10</div>
+    <div class="day">11</div>
+    <div class="day">12</div>
+    <div class="day">13</div>
+    <div class="day">14</div>
+    <div class="day">15</div>
+    <div class="day">16</div>
+    <div class="day">18</div>
+    <div class="day">19</div>
+    <div class="day">20</div>
+    <div class="day">21</div>
+    <div class="day">22</div>
+    <div class="day">23</div>
+    <div class="day">24</div>
+    <div class="day">25</div>
+    <div class="day">26</div>
+    <div class="day">27</div>
+    <div class="day">28</div>
+    <div class="day">29</div>
+
+    <!-- Continue with the rest of the days -->
+
+    <div class="day">30</div>
+    
+  </div>
+  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,77 +109,3 @@
 </header>
 
 <body>
-
-    <month section>
-        <h3>June 2023</h3>
-    </month section>
-
-    <calendar section>
-        <div class="calendar">
-        <div class="header">Sun</div>
-        <div class="header">Mon</div>
-        <div class="header">Tue</div>
-        <div class="header">Wed</div>
-        <div class="header">Thu</div>
-        <div class="header">Fri</div>
-        <div class="header">Sat</div>
-
-        <!--The below four div class="day" left blank to hold space for days of the week before the 1st day of the month.-->
-        <div class="day"></div>
-        <div class="day"></div>
-        <div class="day"></div>
-        <div class="day"></div>
-    
-        <div class="day">1</div>
-        <div class="day">2</div>
-        <div class="day">3</div>
-        <div class="day">4</div>
-        <div class="day">5</div>
-        <div class="day">6</div>
-        <div class="day">7</div>
-        <div class="day">8</div>
-        <div class="day">9</div>
-        <div class="day">10</div>
-        <div class="day">11</div>
-        <div class="day">12</div>
-        <div class="day">13</div>
-        <div class="day">14</div>
-        <div class="day">15</div>
-        <div class="day">16</div>
-        <div class="day">18</div>
-        <div class="day">19</div>
-        <div class="day">20</div>
-        <div class="day">21</div>
-        <div class="day">22</div>
-        <div class="day">23</div>
-        <div class="day">24</div>
-        <div class="day">25</div>
-        <div class="day">26</div>
-        <div class="day">27</div>
-        <div class="day">28</div>
-        <div class="day">29</div>
-
-        <!-- Continue with the rest of the days -->
-
-        <div class="day">30</div>
-    </calendar section>
-
-    <nav section>
-        <ui>
-            <li>___ Working Days this month</li>
-            <li>___ Days I've been in-office</li>
-            <li>___ % of Working Days in-office this month</li>
-        </ui>
-    </nav section>
-
-    <tool section >
-        <ui>
-            <!--will the APIs be displayed in text form? Or will it  be like a "window" iew into the API?-->
-            <li>Weather Report</li>
-            <li>Traffic Report</li>
-            <li>Federal Holidays</li>
-        </ui>
-    </tool section>
-    
- </body>
-</html>
