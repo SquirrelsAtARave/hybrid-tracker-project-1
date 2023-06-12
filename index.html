@@ -1,15 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--changed title of webpage from "Document" to "Hybrid Tracker"-->
-    <title>Hybrid Tracker Tool</title>
-    <!--html link for stylesheet sourced here: https://bulma.io/documentation/overview/start/ -->
+    <title>Hybrid Tracker</title>
+   <!-- html link for stylesheet linked below sourced here: https://bulma.io/documentation/overview/start/ -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+   <!--style information within the head for calendar coding in the body below is from Alicia's code on Thursday--> 
+    <style>
+        .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      margin: 20px;
+     }
+
+     .day {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ccc;
+        }
+
+        .header {
+      font-weight: bold;
+      background-color: #f2f2f2;
+     }
+    </style>
 </head>
+
+<header>
+    <h1>My Hybrid Attendence Tracker</h1>
+    <p>Click on the date you attended work in-office to add it to your monthly 50% requirement.</p>
+</header>
+
 <body>
-    <h1>Hybrid Tracker</h1>
+
+    <month section>
+        <h3>June 2023</h3>
+    </month section>
+
+    <calendar section>
+        <div class="calendar">
+        <div class="header">Sun</div>
+        <div class="header">Mon</div>
+        <div class="header">Tue</div>
+        <div class="header">Wed</div>
+        <div class="header">Thu</div>
+        <div class="header">Fri</div>
+        <div class="header">Sat</div>
+
+        <!--The below four div class="day" left blank to hold space for days of the week before the 1st day of the month.-->
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+    
+        <div class="day">1</div>
+        <div class="day">2</div>
+        <div class="day">3</div>
+        <div class="day">4</div>
+        <div class="day">5</div>
+        <div class="day">6</div>
+        <div class="day">7</div>
+        <div class="day">8</div>
+        <div class="day">9</div>
+        <div class="day">10</div>
+        <div class="day">11</div>
+        <div class="day">12</div>
+        <div class="day">13</div>
+        <div class="day">14</div>
+        <div class="day">15</div>
+        <div class="day">16</div>
+        <div class="day">18</div>
+        <div class="day">19</div>
+        <div class="day">20</div>
+        <div class="day">21</div>
+        <div class="day">22</div>
+        <div class="day">23</div>
+        <div class="day">24</div>
+        <div class="day">25</div>
+        <div class="day">26</div>
+        <div class="day">27</div>
+        <div class="day">28</div>
+        <div class="day">29</div>
+
+    <!-- Continue with the rest of the days -->
+
+    <div class="day">30</div>
+    
+  </div>
+</calendar section>
 </body>
 </html>
