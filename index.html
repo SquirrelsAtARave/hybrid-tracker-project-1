@@ -77,13 +77,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--changed title of webpage from "Document" to "Hybrid Tracker"-->
-    <title>Hybrid Tracker Tool</title>
-    <!--html link for stylesheet sourced here: https://bulma.io/documentation/overview/start/ -->
+    <title>Hybrid Tracker</title>
+   <!-- html link for stylesheet linked below sourced here: https://bulma.io/documentation/overview/start/ -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-</head>
-<body>
-    <h1>Hybrid Tracker</h1>
 
-</body>
-</html>
+   <!--style information within the head for calendar coding in the body below is from Alicia's code on Thursday--> 
+    <style>
+        .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      margin: 20px;
+     }
+
+     .day {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ccc;
+        }
+
+        .header {
+      font-weight: bold;
+      background-color: #f2f2f2;
+     }
+    </style>
+</head>
+
+<header>
+    <h1>My Hybrid Attendence Tracker</h1>
+    <p>Click on the date you attended work in-office to add it to your monthly 50% requirement.</p>
+</header>
+
+<body>
