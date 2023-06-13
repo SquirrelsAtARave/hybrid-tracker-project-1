@@ -1,29 +1,17 @@
 <!DOCTYPE html>
-
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hybrid Tracker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+  </head>
 <!--style information within the head for calendar coding in the body below is from Alicia's code on Thursday--> 
-    <style>
-        .calendar {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 5px;
-      margin: 20px;
-     }
+ 
 
-     .day {
-      padding: 10px;
-      text-align: center;
-      border: 1px solid #ccc;
-        }
-
-        .header {
-      font-weight: bold;
-      background-color: #f2f2f2;
-     }
-    </style>
-</head>
 
 <header>
-    <h1>My Hybrid Attendence Tracker</h1>
+    <h1>My Hybrid Attendance Tracker</h1>
     <p>Click on the date you attended work in-office to add it to your monthly 50% requirement.</p>
 </header>
 
@@ -33,7 +21,7 @@
         <h3>June 2023</h3>
     </month section>
 
-    <calendar section>
+    <div>
         <div class="calendar">
         <div class="header">Sun</div>
         <div class="header">Mon</div>
@@ -65,6 +53,7 @@
         <div class="day">14</div>
         <div class="day">15</div>
         <div class="day">16</div>
+        <div class="day">17</div>
         <div class="day">18</div>
         <div class="day">19</div>
         <div class="day">20</div>
@@ -81,15 +70,16 @@
         <!-- Continue with the rest of the days -->
 
         <div class="day">30</div>
-    </calendar section>
+        </div>
 
-    <nav section>
-        <ui>
-            <li>___ Working Days this month</li>
-            <li>___ Days I've been in-office</li>
+    <div id = "numbers">
+        <h3>Working Days this month</h3>
+        <p id ="working-days"></p>
+           
+            <h3>Days I've been in-office</h3>
             <li>___ % of Working Days in-office this month</li>
-        </ui>
-    </nav section>
+        </ul>
+    </div>
 
     <tool section >
         <ui>
@@ -100,5 +90,8 @@
         </ui>
     </tool section>
     
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
+    <script src="script.js"></script>
+
  </body>
 </html>
