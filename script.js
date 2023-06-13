@@ -36,3 +36,12 @@ console.log (workingDaysEl)
 
 workingDaysEl.textContent = numberOfWeekdays;
 
+daysEl=document.getElementById("days");
+console.log(daysEl);
+
+daysEl.addEventListener("click", function(event) {
+    var element = event.target;
+  console.log(element);
+   // if (element.matches(".box")) {
+  //    var state = element.getAttribute("data-state");}}
+});
