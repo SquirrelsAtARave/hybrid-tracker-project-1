@@ -1,5 +1,7 @@
 var currentMonth = dayjs().month();
 var currentYear = dayjs().year();
+var daysInOffice = 0;
+var percentageInOffice = 0;
 console.log(currentMonth);
 console.log(currentYear);
 
@@ -28,7 +30,7 @@ var numberOfWeekdays = getWeekdaysInMonth(currentMonth,currentYear);
 
 console.log(numberOfWeekdays);
 
-numbersEl =document.getElementById("numbers")
+//numbersEl =document.getElementById("numbers")
 workingDaysEl =document.getElementById("working-days");
 console.log (workingDaysEl)
 
