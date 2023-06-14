@@ -54,10 +54,12 @@ daysEl.addEventListener("click", function (event) {
       if (state === "off") {
         daysInOffice++;
         element.dataset.state = "on";
+        element.classList.add("has-background-warning");
       }
       else if (daysInOffice>0){
         daysInOffice--;
         element.dataset.state = "off";
+        element.classList.remove("has-background-warning");
       }
       officeDaysEl = document.getElementById("office-days");
       officeDaysEl.textContent = daysInOffice;
