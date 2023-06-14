@@ -13,8 +13,9 @@ var daysInMonth = getDaysInMonth(currentMonth, currentYear);
 console.log(daysInMonth);
 
 function isWeekday(year, month, day) {
-  var day = new Date(year, month, day).getDay();
-  return day != 0 && day != 6;
+  var currentDay = new Date(year, month, day).getDay();
+  console.log("day: " + currentDay);
+  return currentDay != 0 && currentDay != 6;
 }
 
 function getWeekdaysInMonth(month, year) {
@@ -45,8 +46,11 @@ daysEl.addEventListener("click", function (event) {
   if (element.matches(".day")) {
     var state = element.getAttribute("data-state");
     var number = element.getAttribute("data-number");
+    console.log ("state: " + state);
+    console.log ("number: " + number);
 
-    if (isWeekday(currentMonth, currentYear, number)) {
+    if (isWeekday(currentYear, currentMonth,number) && (state !== null && number !== null)) {
+      console.log("weekday");
       if (state === "off") {
         daysInOffice++;
         element.dataset.state = "on";
@@ -57,6 +61,9 @@ daysEl.addEventListener("click", function (event) {
       }
       officeDaysEl = document.getElementById("office-days");
       officeDaysEl.textContent = daysInOffice;
+      percentageEl = document.getElementById("percentage");
+      percentageInOffice = (((daysInOffice/numberOfWeekdays) * 100)).toFixed(1);
+      percentageEl.textContent = ( percentageInOffice + " %");
     }
 
   }
