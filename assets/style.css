@@ -12,7 +12,11 @@ text-align: center;
 border: 1px solid #ccc;
 }
 
-.header {
+.day:hover{
+    background-color: orange;
+} 
+
+.column {
 font-weight: bold;
 background-color: #f2f2f2;
 }
