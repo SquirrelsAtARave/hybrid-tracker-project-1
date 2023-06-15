@@ -29,4 +29,17 @@ background-color: #f2f2f2;
 p{
     text-align: center;
 }
-    
+/* added for weather portion */
+.five-day-forecast{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    background-color: rgb(188, 212, 197);
+ }
+
+.five-day-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
