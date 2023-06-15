@@ -74,12 +74,24 @@
         </div>
 
     <div id = "numbers" class = "section">
+        <div class="column">
+        
         <h3>Working Days this month</h3>
-        <p id ="working-days"></p>
-        <h3>Days I've been in-office</h3>
-        <p id="office-days"></p>
-        <h3>% of Working Days in-office this month</h3>
-        <p id="percentage"></p>
+       
+        <p id ="working-days" class="is-centered"></p>
+        </div>
+        <div class="column">
+            
+        <h3 class="is-centered">Days I've been in-office this month</h3>
+      
+        <p id="office-days" class="is-centered"></p>
+        </div>
+        <div class="card">
+            <header class="card-header">
+        <h3 class="card-header-title is-centered">% of Working Days in-office this month</h3>
+        </header>
+        <p id="percentage" class="card-content content is-centered"></p>
+            </div>
     </div>
 
     <tool section >
@@ -93,6 +105,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
     <script src="script.js"></script>
+    <script src="weather.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.8/dayjs.min.js" integrity="sha512-af90l7+r/ujCury3kqomcoZ4aNuC4JP0xUUU682bqlRCLLvGJrc9L82zONFccLWmxcMXSqO9d6C7Rr39EkbT3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
  </body>
