@@ -3,6 +3,7 @@ display: grid;
 grid-template-columns: repeat(7, 1fr);
 gap: 5px;
 margin: 20px;
+max-width: 375 px;
 }
 
 .day {
@@ -11,9 +12,18 @@ text-align: center;
 border: 1px solid #ccc;
 }
 
+.day, .column tag is-primary is-large {
+    display: flex;
+}
+
 .day:hover{
     background-color: orange;
 } 
+
+#days {
+    display: flex;
+    justify-content: center;
+}
 
 .column {
     font-weight: bold;
@@ -31,7 +41,6 @@ border: 1px solid #ccc;
 #numbers {
     display: flex;
     flex-direction: row;
-  
 }
 
 
@@ -71,4 +80,5 @@ p {
 h1, h2, h3 {
     justify-content: center;
     text-align: center;
+    padding: 10px 10px;
 }
