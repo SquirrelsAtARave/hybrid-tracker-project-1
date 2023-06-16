@@ -3,6 +3,8 @@ var currentYear = dayjs().year();
 var daysInOffice = 0;
 var percentageInOffice = 0;
 var storedDays = [];
+var state;
+var number;
 console.log(currentMonth);
 console.log(currentYear);
 
@@ -40,34 +42,39 @@ workingDaysEl.textContent = numberOfWeekdays;
 
 daysEl = document.getElementById("days");
 console.log(daysEl);
-init();
+//init();
 
 daysEl.addEventListener("click", function (event) {
   var element = event.target;
+  state = "";
+  number = "";
   console.log(element);
   if (element.matches(".day")) {
-    var state = element.getAttribute("data-state");
-    var number = element.getAttribute("data-number");
+    state = element.getAttribute("data-state");
+    number = element.getAttribute("data-number");
+    console.log(element);
     console.log ("state: " + state);
     console.log ("number: " + number);
 
     if (isWeekday(currentYear, currentMonth,number) && (state !== null && number !== null)) {
       console.log("weekday");
-      if (state === "off") {
+      if (element.dataset.state === "off") {
+        console.log("test");
         daysInOffice++;
         element.dataset.state = "on";
         element.classList.add("has-background-warning");
-        storedDays[number-1].state ="on";
-        console.log(storedDays);
-        setStorage();
+        console.log(element);
+      storedDays[number-1].ststate ="on";
+      console.log(storedDays);
+      setStorage();
       }
       else if (daysInOffice>0){
         daysInOffice--;
         element.dataset.state = "off";
         element.classList.remove("has-background-warning");
-        storedDays[number-1].state ="off";
-        console.log(storedDays);
-        setStorage()
+       storedDays[number-1].ststate ="off";
+       console.log(storedDays);
+       setStorage()
       }
       officeDaysEl = document.getElementById("office-days");
       officeDaysEl.textContent = daysInOffice;
@@ -101,7 +108,7 @@ function init() {
   }
   else {
     for (i=1; i<= daysInMonth; i++){
-      storedDay = { day:i, state:"off"};
+      storedDay = { stday:i, ststate:"off"};
       storedDays.push(storedDay);
     }
     setStorage();
@@ -110,8 +117,6 @@ console.log(storedDays);
   // This is a helper function that will render todos to the DOM
   renderMonth();
 }
-
-
 
 
 
