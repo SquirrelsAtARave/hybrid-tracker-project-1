@@ -75,32 +75,35 @@
 
     <div id = "numbers" class = "section">
         <div class="column">
-        
-        <h3>Working Days this month</h3>
-       
-        <p id ="working-days" class="is-centered"></p>
-        </div>
-        <div class="column">
-            
-        <h3 class="is-centered">Days I've been in-office this month</h3>
-      
-        <p id="office-days" class="is-centered"></p>
-        </div>
-        <div class="card">
             <header class="card-header">
-        <h3 class="card-header-title is-centered">% of Working Days in-office this month</h3>
-        </header>
-        <p id="percentage" class="card-content content is-centered"></p>
+                <h3 class="card-header-title is-centered">Working Days this month</h3>
+            </header>
+       
+            <p id ="working-days" class="card-content content is-centered"></p>
+        </div>
+
+        <div class="column">
+            <header class="card-header">
+                <h3 class="card-header-title is-centered">Days I've been in office this month</h3>
+            </header>
+            <p id="office-days" class="card-content content is-centered"></p>
+        </div>
+
+        <div class="column" id="percent-working">
+            <header class="card-header">
+                <h3 class="card-header-title is-centered">% of Working Days in-office this month</h3>
+            </header>
+            <p id="percentage" class="card-content content is-centered"></p>
             </div>
     </div>
 
     <tool section >
        
         <ui>
-            <h2>Federal Holidays</h2>
-            <div id="holidays"></div>
+            <h2 class="title is-3">Federal Holidays</h2>
+            <div id="holidays" class = "subtitle is-4"></div>
             
-            <h2>Weather Report</h2>
+            <h2 class="title is-3">Weather Report</h2>
             <div class="history">
                 <form id="search-form">
                     <input type="text" id="input-box" class="input"/> 
