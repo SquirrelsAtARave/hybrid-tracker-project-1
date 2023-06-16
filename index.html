@@ -98,13 +98,6 @@
     <tool section >
        
         <ui>
-             
-            <!--will the APIs be displayed in text form? Or will it  be like a "window" view into the API? -->
-
-            <li>Weather Report</li> 
-             
-            <!-- Added for weather portion --> 
-                   
             <div class="history">
                  
                 <form id="search-form">
@@ -118,12 +111,12 @@
             <div class="five-day-forecast">
             </div>
            
-            </div>
+          </div>
+           <li>Federal Holidays</li>
+           <div id="holidays"></div>
           
            <li>Federal Holidays</li>
-         
         </ui>
-  
 
     </tool section>
    
@@ -132,10 +125,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./script.js"></script> 
     
-    <!-- <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script> -->
     <script src="script.js"></script>
-    <!-- <script src="weather.js"></script> -->
-
+    <script src="weather.js"></script>
+    <script src="holidays.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/customParseFormat.js"></script>
+    <script>dayjs.extend(window.dayjs_plugin_customParseFormat)</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.8/dayjs.min.js" integrity="sha512-af90l7+r/ujCury3kqomcoZ4aNuC4JP0xUUU682bqlRCLLvGJrc9L82zONFccLWmxcMXSqO9d6C7Rr39EkbT3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
  </body>
 </html>
