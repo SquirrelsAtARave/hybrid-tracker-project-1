@@ -16,8 +16,16 @@ border: 1px solid #ccc;
 } 
 
 .column {
-font-weight: bold;
-background-color: #f2f2f2;
+    font-weight: bold;
+    background-color: rgb(182, 182, 182);
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+#percent-working {
+    background-color: #87dacd;
+    border-color: grey;
+    border-width: 5px;
 }
 
 #numbers {
@@ -25,7 +33,9 @@ background-color: #f2f2f2;
     flex-direction: row;
   
 }
-p{
+
+
+p {
     text-align: center;
 }
 
@@ -35,7 +45,7 @@ p{
     flex-direction: row;
     flex-wrap: wrap;
     gap: 3rem;
-    background-color: rgb(188, 212, 197);
+    background-color: #dde97c;
  }
 
 .five-day-wrapper{
@@ -60,5 +70,5 @@ p{
 
 h1, h2, h3 {
     justify-content: center;
-    text-align:  center;
+    text-align: center;
 }
