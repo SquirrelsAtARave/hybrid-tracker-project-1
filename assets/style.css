@@ -1,4 +1,3 @@
-
 .calendar {
 display: grid;
 grid-template-columns: repeat(7, 1fr);
@@ -29,6 +28,7 @@ background-color: #f2f2f2;
 p{
     text-align: center;
 }
+
 /* added for weather portion */
 .five-day-forecast{
     display: flex; 
@@ -42,4 +42,23 @@ p{
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+.history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:  center;
+}
+
+h1, h2, h3 {
+    justify-content: center;
+    text-align:  center;
 }

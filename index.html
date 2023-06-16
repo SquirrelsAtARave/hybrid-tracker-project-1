@@ -12,14 +12,13 @@
 
 
 <header class = "header">
-    <h1>My Hybrid Attendance Tracker</h1>
-    <p>Click on the date you attended work in-office to add it to your monthly 50% requirement.</p>
+    <h1 class="title is-1">My Hybrid Attendance Tracker</h1>
+    <h2 class="subtitle">Click on the date you attended work in-office to add it to your monthly 50% requirement.</h2>
 </header>
 
 <body>
-
     <month section>
-        <h3>June 2023</h3>
+        <h3 class="title is-2">June 2023</h3>
     </month section>
 
     <div id="days" class="has-text-black has-text-weight-semibold">
@@ -98,11 +97,14 @@
     <tool section >
        
         <ui>
+            <h2>Federal Holidays</h2>
+            <div id="holidays"></div>
+            
+            <h2>Weather Report</h2>
             <div class="history">
-                 
                 <form id="search-form">
-                <input type="text" id="input-box" class="input"/> 
-                <button id="search" class="btn">search</button>   
+                    <input type="text" id="input-box" class="input"/> 
+                    <button id="search" class="btn">search</button>   
                 </form>
     
             </div>
@@ -112,10 +114,6 @@
             </div>
            
           </div>
-           <li>Federal Holidays</li>
-           <div id="holidays"></div>
-          
-           <li>Federal Holidays</li>
         </ui>
 
     </tool section>
