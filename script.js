@@ -2,6 +2,7 @@ var currentMonth = dayjs().month();
 var currentYear = dayjs().year();
 var daysInOffice = 0;
 var percentageInOffice = 0;
+var storedDays = [];
 console.log(currentMonth);
 console.log(currentYear);
 
@@ -39,6 +40,7 @@ workingDaysEl.textContent = numberOfWeekdays;
 
 daysEl = document.getElementById("days");
 console.log(daysEl);
+init();
 
 daysEl.addEventListener("click", function (event) {
   var element = event.target;
@@ -55,11 +57,17 @@ daysEl.addEventListener("click", function (event) {
         daysInOffice++;
         element.dataset.state = "on";
         element.classList.add("has-background-warning");
+        storedDays[number-1].state ="on";
+        console.log(storedDays);
+        setStorage();
       }
       else if (daysInOffice>0){
         daysInOffice--;
         element.dataset.state = "off";
         element.classList.remove("has-background-warning");
+        storedDays[number-1].state ="off";
+        console.log(storedDays);
+        setStorage()
       }
       officeDaysEl = document.getElementById("office-days");
       officeDaysEl.textContent = daysInOffice;
@@ -72,6 +80,36 @@ daysEl.addEventListener("click", function (event) {
 
 }
 );
+
+function setStorage(){
+  localStorage.setItem("storedDays", JSON.stringify(storedDays));
+}
+
+function renderMonth(){
+  for (i=1; i<= daysInMonth; i++){
+    
+  }
+}
+function init() {
+  // Get stored todos from localStorage
+  var storedDay;
+  var storedMonth = JSON.parse(localStorage.getItem("storageMonth"));
+
+  // If todos were retrieved from localStorage, update the todos array to it
+  if (storedMonth !== null) {
+    storedDays = storedMonth;
+  }
+  else {
+    for (i=1; i<= daysInMonth; i++){
+      storedDay = { day:i, state:"off"};
+      storedDays.push(storedDay);
+    }
+    setStorage();
+  }
+console.log(storedDays);
+  // This is a helper function that will render todos to the DOM
+  renderMonth();
+}
 
 
 
