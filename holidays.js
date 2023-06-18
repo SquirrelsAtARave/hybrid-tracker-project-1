@@ -15,13 +15,43 @@ fetch("https://date.nager.at/api/v3/publicholidays/2023/US")
       console.log(day);
       var holidays = $(`
         <div>
-        <h2>Holiday: ${holiday.name}
+        <h2>${holiday.name}
         ${day.format("dddd, MMMM DD, YYYY")}
         </div>`);
       $("#holidays").append(holidays);
+      renderHolidays(day);
     });
   })
   
   .catch((error) => {
     console.error("Error:", error);
   });
+
+  function renderHolidays(day){
+    var holiday2 = dayjs(day).date();
+    console.log("holiday" + holiday2);
+    dayEl = document.querySelectorAll(".day");
+
+    for (i = 0; i < dayEl.length; i++) {
+      currentState = dayEl[i].getAttribute("data-state");
+      currentNumber = dayEl[i].getAttribute("data-number")
+
+      console.log("currentnumber: " + currentNumber);
+
+      if (currentNumber== holiday2){
+        delete dayEl[i].dataset.state;
+        dayEl[i].classList.add("has-background-danger-light");
+        var workingDays = document.getElementById("working-days").value;
+        console.log("wk1: " + workingDays);
+
+        workingDays--;
+        console.log("wk2: " + workingDays);
+
+      }
+    }
+
+   
+
+
+
+  }

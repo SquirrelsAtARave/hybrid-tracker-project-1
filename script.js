@@ -1,3 +1,5 @@
+
+//initializing variables
 var currentMonth = dayjs().month();
 var currentYear = dayjs().year();
 var daysInOffice = 0;
@@ -8,19 +10,19 @@ var number;
 console.log(currentMonth);
 console.log(currentYear);
 
+//get the number of days in a month
 function getDaysInMonth(month, year) {
   return 32 - new Date(year, month, 32).getDate();
 }
 
-var daysInMonth = getDaysInMonth(currentMonth, currentYear);
-console.log(daysInMonth);
-
+//function to see if the day is a weekday
 function isWeekday(year, month, day) {
   var currentDay = new Date(year, month, day).getDay();
   console.log("day: " + currentDay);
   return currentDay != 0 && currentDay != 6;
 }
 
+//get the number of working days in a month
 function getWeekdaysInMonth(month, year) {
   var weekdays = 0;
   for (var i = 0; i < daysInMonth; i++) {
@@ -29,14 +31,15 @@ function getWeekdaysInMonth(month, year) {
   return weekdays;
 }
 
+
+var daysInMonth = getDaysInMonth(currentMonth, currentYear);
+console.log(daysInMonth);
+
 var numberOfWeekdays = getWeekdaysInMonth(currentMonth, currentYear);
 
 console.log(numberOfWeekdays);
-
-//numbersEl =document.getElementById("numbers")
+//displaying the number of Working days in a month
 workingDaysEl = document.getElementById("working-days");
-console.log(workingDaysEl);
-
 workingDaysEl.textContent = numberOfWeekdays;
 
 daysEl = document.getElementById("days");
@@ -80,15 +83,18 @@ daysEl.addEventListener("click", function (event) {
         console.log(storedDays);
         setStorage();
       }
-      officeDaysEl = document.getElementById("office-days");
-      officeDaysEl.textContent = daysInOffice;
-      percentageEl = document.getElementById("percentage");
-      percentageInOffice = ((daysInOffice / numberOfWeekdays) * 100).toFixed(1);
-      percentageEl.textContent = percentageInOffice + " %";
+      renderNumbers();
     }
   }
 });
 
+function renderNumbers(){
+  officeDaysEl = document.getElementById("office-days");
+  officeDaysEl.textContent = daysInOffice;
+  percentageEl = document.getElementById("percentage");
+  percentageInOffice = ((daysInOffice / numberOfWeekdays) * 100).toFixed(1);
+  percentageEl.textContent = percentageInOffice + " %";
+}
 function setStorage() {
   localStorage.setItem("storedDays", JSON.stringify(storedDays));
 }
@@ -96,30 +102,37 @@ function setStorage() {
 function renderMonth() {
   console.log ("render month");
   var currentState = "";
-  var currentNumber = "";
+  var currentNumber = 0;
   for (i = 0; i < dayEl.length; i++) {
     currentState = dayEl[i].getAttribute("data-state");
     currentNumber = dayEl[i].getAttribute("data-number");
     if (currentState !== null && currentNumber !== null) {
       for (j = 0; j < storedDays.length; j++){
-        if (storedDays[j].stday === currentNumber) {
+        console.log("storedday: " + storedDays[j].stday);
+        console.log("currentnumber: " + currentNumber);
+        if (storedDays[j].stday == currentNumber) {
           console.log("storedday-i: " + storedDays[j].stday);
-          dayEl[i].setAttribute("data-state", currentState);
+          console.log("storedstate: " + storedDays[j].ststate);
+          //dayEl[i].setAttribute("data-state", currentState);
+          dayEl[i].dataset.state = storedDays[j].ststate;
 
-          if (currentState === "on") {
+          if (storedDays[j].ststate == "on") {
             dayEl[i].classList.add("has-background-warning");
+            daysInOffice++;
           }
+          console.log(dayEl[i]);
         }
     }
   }
 }
+renderNumbers();
 }
 function init() {
-  // Get stored todos from localStorage
+  // Get stored days from localStorage
   var storedDay;
-  var storedMonth = JSON.parse(localStorage.getItem("storageMonth"));
+  var storedMonth = JSON.parse(localStorage.getItem("storedDays"));
 
-  // If todos were retrieved from localStorage, update the todos array to it
+  // If days were retrieved from localStorage, update the storedDays array to it
   if (storedMonth !== null) {
     console.log("not null");
     storedDays = storedMonth;
@@ -133,6 +146,8 @@ function init() {
   }
   console.log("in init:");
   console.log(storedDays);
-  // This is a helper function that will render todos to the DOM
+  // This is a helper function that will render the local storage calendar to the DOM
   renderMonth();
+  
 }
+
