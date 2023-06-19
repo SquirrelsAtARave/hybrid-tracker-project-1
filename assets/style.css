@@ -107,10 +107,14 @@ h3 {
     margin: 1vw 1vw;
 }
 
-.five-day-wrapper, .five-day-forecast {
-    padding: 1vw 1vw;
-    margin: 1vw 1vw;
-};
+#weather-title {
+    margin: 0px 1vw;
+}
+
+#search {
+    padding: 2vw 2vw;
+    margin: 2vw 2vw;
+}
 
 @media only screen and (max-width: 900px) {
   #days > * {
@@ -120,7 +124,7 @@ h3 {
   .column {
     padding: 0.5vw 0.5vw;
     margin: 0.5vw 0.5vw;
-    font-size: 2vw;
+    font-size: 3vw;
   }
 }
 
@@ -132,7 +136,7 @@ h3 {
   .column {
     padding: 0.25vw 0.5vw;
     margin: 0.25vw 0.5vw;
-    font-size: 1vw;
+    font-size: 3vw;
   }
 }
 
@@ -144,6 +148,6 @@ h3 {
   .column {
     padding: 0.2vw 0.2vw;
     margin: 0.2vw 0.2vw;
-    font-size: 0.5vw;
+    font-size: 3vw;
   }
 }
