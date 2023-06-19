@@ -88,7 +88,7 @@ daysEl.addEventListener("click", function (event) {
   }
 });
 
-function renderNumbers(){
+function renderNumbers() {
   officeDaysEl = document.getElementById("office-days");
   officeDaysEl.textContent = daysInOffice;
   percentageEl = document.getElementById("percentage");
@@ -100,14 +100,14 @@ function setStorage() {
 }
 
 function renderMonth() {
-  console.log ("render month");
+  console.log("render month");
   var currentState = "";
   var currentNumber = 0;
   for (i = 0; i < dayEl.length; i++) {
     currentState = dayEl[i].getAttribute("data-state");
     currentNumber = dayEl[i].getAttribute("data-number");
     if (currentState !== null && currentNumber !== null) {
-      for (j = 0; j < storedDays.length; j++){
+      for (j = 0; j < storedDays.length; j++) {
         console.log("storedday: " + storedDays[j].stday);
         console.log("currentnumber: " + currentNumber);
         if (storedDays[j].stday == currentNumber) {
@@ -122,10 +122,10 @@ function renderMonth() {
           }
           console.log(dayEl[i]);
         }
+      }
     }
   }
-}
-renderNumbers();
+  renderNumbers();
 }
 function init() {
   // Get stored days from localStorage
@@ -148,6 +148,6 @@ function init() {
   console.log(storedDays);
   // This is a helper function that will render the local storage calendar to the DOM
   renderMonth();
-  
+
 }
 
