@@ -78,7 +78,7 @@ https://bulma.io/documentation/overview/start/
 
 # Project Reference
 [project page]
-[GitHub page] <a href="https://github.com/ahermez/hybrid-tracker-project-1.git"></a>
+[GitHub page] <a href="https://github.com/ahermez/hybrid-tracker-project-1.git">Github Page</a>
 
 # Authors:
 Vinita Navani
