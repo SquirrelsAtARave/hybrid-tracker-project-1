@@ -1,5 +1,5 @@
 # Project Title:
-hybrid-tracker
+Hybrid-Tracker
 
 
 # Motivation: 
@@ -12,17 +12,17 @@ In an ideal future scenario, the app designed for employees with hybrid schedule
 # Acceptance Criteria
 
   - ## User Story
-   As an employee, I need a simple web application to help me plan and track my schedule in order to meet my company’s requirement that 50% of my workdays be in-office.
+    As an employee, I need a simple web application to help me plan and track my schedule in order to meet my company’s requirement that 50% of my workdays be in-office.
 
   - ## Scenario: 
-  I need to review my in-office attendance for the month so far, and plan my schedule for next week.
+    I need to review my in-office attendance for the month so far, and plan my schedule for next week.
 
   - ## Given: 
-  When I open the web application in a chrome browser.
+    When I open the web application in a chrome browser.
 
-  - ## If...
-  Hvering over the date, then the box will turn orange.
-  The date is clicked on, then the box will turn to yellow after the clike action.  The day will be counted toward days in office and percentage.
+  - ## If:
+    Hovering over the date, then the box will turn orange.
+  The date is clicked on, then the box will turn to yellow after the click action.  The day will be counted toward days in office and percentage.
   If scrolled down the page to view upcoming holiday(s), the holiday API will provide all holiday(s) in the month.
   If input the city or zip code, the weather API will provide the 5 days weather forecast.
   If clicked on the weekends and holiday(s), the box color and counts will remain the same.
