@@ -4,12 +4,12 @@ fetch("https://date.nager.at/api/v3/publicholidays/2023/US")
     const federalHolidays = data.filter(
       (holiday) => holiday.types[0] === "Public"
     );
-    
+
     const juneHolidays = federalHolidays.filter((holiday) => {
       const day = dayjs(holiday.date, "YYYY-MM-DD");
       return day.format("M") == 6;
     });
-    
+
     juneHolidays.forEach((holiday) => {
       const day = dayjs(holiday.date, "YYYY-MM-DD");
       console.log(day);
@@ -22,36 +22,30 @@ fetch("https://date.nager.at/api/v3/publicholidays/2023/US")
       renderHolidays(day);
     });
   })
-  
+
   .catch((error) => {
     console.error("Error:", error);
   });
 
-  function renderHolidays(day){
-    var holiday2 = dayjs(day).date();
-    console.log("holiday" + holiday2);
-    dayEl = document.querySelectorAll(".day");
+function renderHolidays(day) {
+  var holiday2 = dayjs(day).date();
+  console.log("holiday" + holiday2);
+  dayEl = document.querySelectorAll(".day");
 
-    for (i = 0; i < dayEl.length; i++) {
-      currentState = dayEl[i].getAttribute("data-state");
-      currentNumber = dayEl[i].getAttribute("data-number")
+  for (i = 0; i < dayEl.length; i++) {
+    currentState = dayEl[i].getAttribute("data-state");
+    currentNumber = dayEl[i].getAttribute("data-number");
 
-      console.log("currentnumber: " + currentNumber);
+    console.log("currentnumber: " + currentNumber);
 
-      if (currentNumber== holiday2){
-        delete dayEl[i].dataset.state;
-        dayEl[i].classList.add("has-background-danger-light");
-        var workingDays = document.getElementById("working-days").value;
-        console.log("wk1: " + workingDays);
+    if (currentNumber == holiday2) {
+      delete dayEl[i].dataset.state;
+      dayEl[i].classList.add("has-background-danger-light");
+      var workingDays = document.getElementById("working-days").value;
+      console.log("wk1: " + workingDays);
 
-        workingDays--;
-        console.log("wk2: " + workingDays);
-
-      }
+      workingDays--;
+      console.log("wk2: " + workingDays);
     }
-
-   
-
-
-
   }
+}
