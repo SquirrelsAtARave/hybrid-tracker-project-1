@@ -44,11 +44,6 @@ function renderHolidays(day) {
     if (currentNumber == holiday2) {
       delete dayEl[i].dataset.state;
       dayEl[i].classList.add("has-background-danger-light");
-      var workingDays = document.getElementById("working-days").value;
-      console.log("wk1: " + workingDays);
-
-      workingDays--;
-      console.log("wk2: " + workingDays);
     }
   }
 }
