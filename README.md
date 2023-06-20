@@ -61,7 +61,7 @@ The code used to build the hybrid-tracker are HTML,CSS and JavaScript. Here is a
 # Screen Shot Images
 images\CalendarScreenshot.jpeg
 <figure>
-  <img src="images\Screenshot (345).png" alt="Screenshot of Calendar" style="width:100%">
+  <img src="images\Screenshot (348).png" alt="Screenshot of Calendar" style="width:100%">
   </figure>
 images\Tracker-Weather-Screenshot.jpg
 <figure>
@@ -81,6 +81,9 @@ https://bulma.io/documentation/overview/start/
 # Project Reference
 [project page]
 [GitHub page] <a href="https://github.com/ahermez/hybrid-tracker-project-1.git">Github Page</a>
+
+# Sources
+[Stack Overflow] <a href=https://stackoverflow.com/questions/7827838/how-can-i-find-the-number-of-business-days-in-the-current-month-with-javascript#:~:text=So[…]tivity%20on>
 
 # Authors:
 Vinita Navani
