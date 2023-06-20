@@ -7,19 +7,19 @@ body {
 .calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 2vw;
-  margin: 1vw;
+  gap: .5rem;
+  margin: .5rem;
 }
 
 .day {
-  padding: 2vw;
+  padding: .5rem;
   text-align: center;
-  border: 1vw solid #ccc;
+  border: 5px solid #ccc;
 }
 
 .day,
 .days > * {
-  display: flex;
+  display: center;
   flex-wrap: wrap-reverse;
 }
 
@@ -30,25 +30,26 @@ body {
 #days {
   display: flex;
   justify-content: center;
-  padding: 1vw 1vw;
+  padding: 0.5rem 0.5rem;
 }
 
 .column {
   font-weight: bold;
   background-color: #ccc;
-  padding: 1vw 1vw;
-  margin: 1vw 1vw;
+  padding: 1rem 1rem;
+  margin: 1rem 1rem;
 }
 
 #percent-working {
   background-color: #87dacd;
   border-color: grey;
-  border-width: 1rm;
+  border-width: 1rem;
 }
 
 #numbers {
   display: flex;
   flex-direction: row;
+  
 }
 
 p {
@@ -58,8 +59,8 @@ p {
 #percent-working {
     align-items: center;
     justify-content: center;
-    padding: 3vw 3vw;
-    margin: 3vw 3vw;
+    padding: 2rem 2rem;
+    margin: 2rem 2rem;
 }
 
 /* added for weather portion */
@@ -67,7 +68,7 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 3vw;
+  gap: 3rem;
   background-color: #87dacd;
 }
 
@@ -122,32 +123,41 @@ h3 {
   }
 
   .column {
-    padding: 0.5vw 0.5vw;
-    margin: 0.5vw 0.5vw;
-    font-size: 3vw;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem 0.5rem;
+    font-size: 3rem;
   }
 }
 
 @media only screen and (max-width: 650px) {
+  .calendar{
+    gap: .125rem;
+    margin: .125rem;
+    grid-gap: .125rem;
+    }
+
+  .day{
+    padding: .25rem;
+    width: 3rem;
+    }
+
   #days > * {
-    padding: 0.5vw;
+    padding: 0.125rem;
   }
 
   .column {
-    padding: 0.25vw 0.5vw;
-    margin: 0.25vw 0.5vw;
-    font-size: 3vw;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0.5rem;
+    font-size: 1em;
+    width: 3rem;
   }
 }
 
 @media only screen and (max-width: 300px) {
   #days > * {
-    padding: 0.25vw;
+    padding: 0.25rem;
   }
 
-  .column {
-    padding: 0.2vw 0.2vw;
-    margin: 0.2vw 0.2vw;
-    font-size: 3vw;
-  }
-}
+ }
+
+
