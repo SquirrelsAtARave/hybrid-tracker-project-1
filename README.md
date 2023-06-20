@@ -79,15 +79,15 @@ https://bulma.io/documentation/overview/start/
 [nager.date] <a href="https://date.nager.at/Api">Federal Holidays</a>
 
 # Project Reference
-[project page]
+[project page] <a href="https://ahermez.github.io/hybrid-tracker-project-1/">Hybrid Attendance Tracker</a>
 [GitHub page] <a href="https://github.com/ahermez/hybrid-tracker-project-1.git">Github Page</a>
 
 # Sources
 [Stack Overflow] <a href=https://stackoverflow.com/questions/7827838/how-can-i-find-the-number-of-business-days-in-the-current-month-with-javascript#:~:text=So[…]tivity%20on>
 
 # Authors:
-Vinita Navani
-Laurel Kidd
-Tina Huang
-Jimmy Varos
-Alicia Hermez
+- Alicia Hermez
+- Jimmy Varos
+- Laurel Kidd
+- Tina Huang
+- Vinita Navani
