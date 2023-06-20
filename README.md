@@ -2,7 +2,7 @@
 Hybrid-Tracker
 
 # Description:
-Hybrid-Tracker empowers employees to quickly track and plan their schedule throughout the month to meet the 50% in-office requirements and equips them with in-app posted federal holidays and a weather report by city or zip code for today and the following 4 days to support their planning efforts.
+Hybrid-Tracker is a web application for in-office attendance tracking and planning and is equipped with a clickable month’s calendar, federal holiday API feed, and a weather report API for the current and following four days. The user clicks on weekdays worked in-office, to which the application responds by updating the calculation of both number of days worked in-office, and the percentage thereof.  Hybrid-Tracker utilizes the user’s local storage in order that when the page is reloaded, it will display the most recent updates made to the user’s record.
 
 # Motivation: 
 The development of the hybrid-tracker arose from a specific requirement within the context of hybrid schedules. With the increasing prevalence of employees working remotely and in-office on alternating days, there is a growing need to accurately monitor and record the distribution of workdays between home and the office. Many modern employers now have monthly limits on the percentage of hours employees can spend working remotely. To address this, the hybrid-tracker was created as a solution. By allowing users to select their work location for each day, the tracker efficiently keeps track of office attendance. 
