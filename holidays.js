@@ -1,3 +1,5 @@
+//Third party API to get Public holidays of the month of June
+
 fetch("https://date.nager.at/api/v3/publicholidays/2023/US")
   .then((response) => response.json())
   .then((data) => {
@@ -27,6 +29,7 @@ fetch("https://date.nager.at/api/v3/publicholidays/2023/US")
     console.error("Error:", error);
   });
 
+  //function to show the holiday on the calendar and make the day un-clickable.
 function renderHolidays(day) {
   var holiday2 = dayjs(day).date();
   console.log("holiday" + holiday2);

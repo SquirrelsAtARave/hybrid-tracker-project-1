@@ -1,3 +1,5 @@
+//Third party API to get the weather of a city
+
 var rootUrl = "https://api.openweathermap.org";
 var apiKey = "0df9efb79a7d906dfcba73a75ec8bd8a";
 
