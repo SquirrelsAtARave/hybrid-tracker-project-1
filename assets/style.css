@@ -43,7 +43,7 @@ body {
 #percent-working {
   background-color: #87dacd;
   border-color: grey;
-  border-width: 1rem;
+  border-width: 50vw;
 }
 
 #numbers {
@@ -59,8 +59,8 @@ p {
 #percent-working {
     align-items: center;
     justify-content: center;
-    padding: 2rem 2rem;
-    margin: 2rem 2rem;
+    padding: 5rem 5rem;
+    margin: 5rem 5rem;
 }
 
 /* added for weather portion */
@@ -68,7 +68,7 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 7rem;
   background-color: #87dacd;
 }
 
@@ -100,7 +100,7 @@ h3 {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 1vw 1vw;
+  padding: 2vw 2vw;
 }
 
 #history {

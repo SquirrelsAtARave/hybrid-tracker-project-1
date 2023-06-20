@@ -61,11 +61,11 @@ The code used to build the hybrid-tracker are HTML,CSS and JavaScript. Here is a
 # Screen Shot Images
 images\CalendarScreenshot.jpeg
 <figure>
-  <img src="images\CalendarScreenshot.jpeg" alt="Screenshot of Calendar" style="width:100%">
+  <img src="images\Screenshot (345).png" alt="Screenshot of Calendar" style="width:100%">
   </figure>
 images\Tracker-Weather-Screenshot.jpg
 <figure>
-  <img src="images\Tracker-Weather-Screenshot.jpg" alt="Screenshot of Weather Forecast" style="width:100%">
+  <img src="images\Screenshot (346).png" alt="Screenshot of Weather Forecast" style="width:100%">
 </figure>
 
 
