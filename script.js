@@ -31,54 +31,53 @@ function getWeekdaysInMonth(month, year) {
 }
 
 var daysInMonth = getDaysInMonth(currentMonth, currentYear);
-console.log(daysInMonth);
-
 var numberOfWeekdays = getWeekdaysInMonth(currentMonth, currentYear);
 
-console.log(numberOfWeekdays);
+
 //displaying the number of Working days in a month
 workingDaysEl = document.getElementById("working-days");
+numberOfWeekdays = numberOfWeekdays - 1; //hardcoding for the Juneteenth holiday in June;
 workingDaysEl.textContent = numberOfWeekdays;
 
 daysEl = document.getElementById("days");
 dayEl = document.querySelectorAll(".day");
-console.log(daysEl);
+
 init();
 
+//Event listener function to capture days in/not in the office
 daysEl.addEventListener("click", function (event) {
+  //getting the element to know which day was clicked
   var element = event.target;
   state = "";
   number = "";
-  console.log(element);
+  
   if (element.matches(".day")) {
+    //getting the elements data attributes
     state = element.getAttribute("data-state");
     number = element.getAttribute("data-number");
-    console.log(element);
-    console.log("state: " + state);
-    console.log("number: " + number);
+ 
 
     if (
       isWeekday(currentYear, currentMonth, number) &&
       state !== null &&
       number !== null
     ) {
-      console.log("weekday");
+      //if the day is not clicked (state = off), set the state to on and change the color to indicate day has been selected
+      //increment days in office and update the local storage
       if (element.dataset.state === "off") {
-        console.log("test");
         daysInOffice++;
         element.dataset.state = "on";
         element.classList.add("has-background-warning");
-        console.log(element);
         storedDays[number - 1].ststate = "on";
-        console.log("on;");
-        console.log(storedDays);
         setStorage();
-      } else if (daysInOffice > 0) {
+      } 
+      //if the day is clicked (state = on), set the state to off and change the color to indicate day has been unselected
+      //decrement days in office and update the local storage
+      else if (daysInOffice > 0) {
         daysInOffice--;
         element.dataset.state = "off";
         element.classList.remove("has-background-warning");
         storedDays[number - 1].ststate = "off";
-        console.log(storedDays);
         setStorage();
       }
       renderNumbers();
@@ -86,45 +85,44 @@ daysEl.addEventListener("click", function (event) {
   }
 });
 
-function renderNumbers(){
+//function to display Days in office and the calculation and display of Percentage in Office
+function renderNumbers() {
   officeDaysEl = document.getElementById("office-days");
   officeDaysEl.textContent = daysInOffice;
   percentageEl = document.getElementById("percentage");
   percentageInOffice = ((daysInOffice / numberOfWeekdays) * 100).toFixed(1);
   percentageEl.textContent = percentageInOffice + " %";
 }
+
+// function to set localStorage
 function setStorage() {
   localStorage.setItem("storedDays", JSON.stringify(storedDays));
 }
 
+//function to display the month from local storage
 function renderMonth() {
-  console.log ("render month");
   var currentState = "";
   var currentNumber = 0;
   for (i = 0; i < dayEl.length; i++) {
     currentState = dayEl[i].getAttribute("data-state");
     currentNumber = dayEl[i].getAttribute("data-number");
     if (currentState !== null && currentNumber !== null) {
-      for (j = 0; j < storedDays.length; j++){
-        console.log("storedday: " + storedDays[j].stday);
-        console.log("currentnumber: " + currentNumber);
+      for (j = 0; j < storedDays.length; j++) {
         if (storedDays[j].stday == currentNumber) {
-          console.log("storedday-i: " + storedDays[j].stday);
-          console.log("storedstate: " + storedDays[j].ststate);
-          //dayEl[i].setAttribute("data-state", currentState);
           dayEl[i].dataset.state = storedDays[j].ststate;
 
           if (storedDays[j].ststate == "on") {
             dayEl[i].classList.add("has-background-warning");
             daysInOffice++;
           }
-          console.log(dayEl[i]);
         }
+      }
     }
   }
+  renderNumbers();
 }
-renderNumbers();
-}
+
+//initial function to get info from local storage and to set local storage if it does not exist
 function init() {
   // Get stored days from localStorage
   var storedDay;
@@ -142,9 +140,6 @@ function init() {
     }
     setStorage();
   }
-  console.log("in init:");
-  console.log(storedDays);
-  // This is a helper function that will render the local storage calendar to the DOM
-  renderMonth();
 
+  renderMonth();
 }
