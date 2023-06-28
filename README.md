@@ -26,61 +26,57 @@ I open the web application in a chrome browser and
 <strong>THEN</strong> I will find a display of this month’s calendar laid out in a box grid with white weekday boxes, pink holiday boxes, and grey weekend day boxes.<br>
 
 <strong>IF</strong> I hover the mouse over a weekday that is not a holiday,<br>
-    - <strong>THEN</strong> the box will turn orange.
+<strong>THEN</strong> the box will turn orange.
     <br>
 
 <strong>IF</strong> I click on a weekday that is not a holiday,<br>
-    - <strong>THEN</strong> the box will turn to yellow AND a value of 1 is added to the count for in-office days AND the day will be added to the in-office percentage.
+<strong>THEN</strong> the box will turn to yellow AND a value of 1 is added to the count for in-office days AND the day will be added to the in-office percentage.
     <br>
 
 <strong>IF</strong> the box is already yellow and I click again,<br>
-    - <strong>THEN</strong>  the box turns white AND a value of 1 is removed from the count for in-office days AND the day will be deducted from the in-office percentage.
+<strong>THEN</strong> the box turns white AND a value of 1 is removed from the count for in-office days AND the day will be deducted from the in-office percentage.
     <br>
 
 <strong>IF</strong> I click on weekends or holiday(s),<br>
-    - <strong>THEN</strong> the box color and counts will remain the same.
+<strong>THEN</strong> the box color and counts will remain the same.
     <br>
 
 <strong>IF</strong> I scroll down the page below the calendar,<br>
-    - <strong>THEN</strong> I will see outputs for number of working days in the month AND number of days worked in-office so far AND the percentage of days worked in-office to the total.
+<strong>THEN</strong> I will see outputs for number of working days in the month AND number of days worked in-office so far AND the percentage of days worked in-office to the total.
     <br>
 
 <strong>IF</strong> I scroll down below the day counters,<br>
-    - <strong>THEN</strong> THEN I will see a display of upcoming holiday(s) this month provided by the holiday API.
+<strong>THEN</strong> THEN I will see a display of upcoming holiday(s) this month provided by the holiday API.
     <br>
 
 <strong>IF</strong> I scroll down below the holiday display and input a city or zipcode,<br>
-    - <strong>THEN</strong>  the weather API will provide the weather forecast for today and the following 4 days.
+<strong>THEN</strong> the weather API will provide the weather forecast for today and the following 4 days.
     <br>
 
 <strong>IF</strong> I click on dates I work in-office and then return to reload the page at another time,<br>
-    - <strong>THEN</strong>  the web application will retrieve AND display my input from the previous session from the local storage.
+<strong>THEN</strong> the web application will retrieve AND display my input from the previous session from the local storage.
 
  
-# Code Style and Features
+## Code Style and Features
 The code used to build the hybrid-tracker are <strong>HTML,CSS and JavaScript</strong>. Here is a breakdown of the code and its features:
 
-  ## Variable Initialization
+  ### Variable Initialization
   - currentMonth and currentYear store the current month and year using the Day.js library.
   - daysInOffice and percentageInOffice keep track of the number of days worked in the office and the percentage of office days.
   - storedDays is an array that holds objects representing the state of each day (whether it's worked in the office or not).
   - state and number are variables used to store the current state and number of the clicked day.
-
-  ## Utility Functions
+  ### Utility Functions
   - getDaysInMonth calculates the number of days in the current month.
   - isWeekday checks if a given year, month, and day represent a weekday.
   - getWeekdaysInMonth counts the number of weekdays in the current month.
-
-  ## DOM Manipulation
+  ### DOM Manipulation
   - The code interacts with HTML elements through various getElementById and querySelectorAll statements.
   - The textContent property is used to update the content of specific elements with calculated values.
-
-  ## Event Listeners
+  ### Event Listeners
   - The code attaches a click event listener to the daysEl element, capturing the clicked day and updating its state accordingly.
   - When a day is clicked, the code modifies its state and appearance, updates the daysInOffice count, and recalculates the office percentage.
   - The setStorage function is called to save the updated storedDays array to the local storage.
-
-  ## Initialization
+  ### Initialization
   - The init function is responsible for initializing the application state.
   - It retrieves the stored month data from the local storage, or if not available, generates the initial storedDays array for the current month.
   - The renderMonth function is called to render the initial state of the days based on the stored data.
