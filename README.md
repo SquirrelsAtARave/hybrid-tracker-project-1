@@ -81,7 +81,7 @@ The code used to build the hybrid-tracker are <strong>HTML,CSS and JavaScript</s
   - It retrieves the stored month data from the local storage, or if not available, generates the initial storedDays array for the current month.
   - The renderMonth function is called to render the initial state of the days based on the stored data.
 
-# Screen Shot Images
+## Web Application Screenshots
 <!-- images\Screenshot (348).png -->
 <figure>
   <img src="images\Screenshot (348).png" alt="Screenshot of Calendar" style="width:100%"> <figcaption><i>Calendar Screenshot</i></figcaption>
@@ -92,26 +92,33 @@ The code used to build the hybrid-tracker are <strong>HTML,CSS and JavaScript</s
 </figure>
 
 
-# Tech Framework used
+## Tech Framework used
 Bulma - An open-source CSS framework that provides a set of responsive, mobile-first CSS styles and components. 
 https://bulma.io/documentation/overview/start/
 
 
-# API Reference
-[OpenWeather] <a href="https://openweathermap.org/">Open Weather</a>
-[nager.date] <a href="https://date.nager.at/Api">Federal Holidays</a>
+## API Resources
+OpenWeather for the Weather Report at <a href="https://openweathermap.org/">openweathermap.org</a><br>
+nager.date for the month's <a href="https://date.nager.at/Api">Federal Holidays</a>
 
-# Project Reference
-[project page] <a href="https://ahermez.github.io/hybrid-tracker-project-1/">Hybrid Attendance Tracker</a>
-[GitHub page] <a href="https://github.com/ahermez/hybrid-tracker-project-1.git">Github Page</a>
+## Project Reference
+<a href="https://ahermez.github.io/hybrid-tracker-project-1/"><strong>Hybrid Tracker</strong></a> deployed group project:<br>
+https://ahermez.github.io/hybrid-tracker-project-1<br>
 
-# Credit
-[Stack Overflow] <a href=https://stackoverflow.com/questions/7827838/how-can-i-find-the-number-of-business-days-in-the-current-month-with-javascript#:~:text=So[…]tivity%20on>
+<a href="https://github.com/ahermez/hybrid-tracker-project-1.git"><strong>Github Group 4 repository</strong></a> for Hybrid Tracker<br>
+https://github.com/ahermez/hybrid-tracker-project-1.git<br>
 
-# Badges
+<a href="https://github.com/SquirrelsAtARave/hybrid-tracker-project-1"><strong>Forked Github repo</strong></a> for any future updates I make:<br>
+https://github.com/SquirrelsAtARave/hybrid-tracker-project-1
+
+## Credit
+<a href="https://stackoverflow.com/questions/7827838/how-can-i-find-the-number-of-business-days-in-the-current-month-with-javascript#:~:text=So%5B%E2%80%A6%5Dtivity%20on">Stack Overflow conversation</a> on using javascript to determine number of business days: <br>
+https://stackoverflow.com/questions/7827838/how-can-i-find-the-number-of-business-days-in-the-current-month-with-javascript#:~:text=So%5B%E2%80%A6%5Dtivity%20on
+
+## Badges
 [![CodeFactor](https://www.codefactor.io/repository/github/squirrelsatarave/hybrid-tracker-project-1/badge)](https://www.codefactor.io/repository/github/squirrelsatarave/hybrid-tracker-project-1)
 
-# Authors
+## Authors
 - Alicia Hermez
 - Jimmy Varos
 - Laurel Kidd
